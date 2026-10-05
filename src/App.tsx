@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import { useEffect } from 'react'
 import { get_top_n_movies, get_genres } from './api/tmdb'
 import { Routes, Route, Link } from 'react-router-dom'
