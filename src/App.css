@@ -182,3 +182,133 @@
     border-right-color: var(--border);
   }
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.gallery-card img{
+  width: 100%;
+  height: auto;
+}
+
+.genre-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.genre-button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.genre-button.active {
+  background: var(--accent);
+  color: white;
+}
+
+.detail-image {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+.detail-nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.detail-content {
+  display: flex;
+  gap: 30px;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.detail-nav button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.detail-nav button:hover {
+  border-color: var(--accent);
+}
+
+.detail-nav button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px;
+}
+
+.main-nav a {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  border-color: var(--accent);
+}
+
+.list-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.list-filters input, select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.movie-list-item {
+  background: var(--code-bg);
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+.movie-list-item a {
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.movie-list-item a:hover {
+  color: var(--accent);
+}
+
+.movie-list-item p {
+  margin: 4px 0;
+}
+
