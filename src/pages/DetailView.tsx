@@ -1,6 +1,5 @@
 import type { Movie } from '../types'
-import { useState } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import {useParams, useNavigate } from 'react-router-dom'
 
 interface DetailViewItem {
     movies: Movie[]

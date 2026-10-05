@@ -8,10 +8,6 @@ import DetailView from './pages/DetailView.tsx'
 import GalleryView from './pages/GalleryView.tsx'
 import './App.css'
 
-function getPoster(suffix: string) {
-  return `https://image.tmdb.org/t/p/w500${suffix}`
-}
-
 function App() {
   const [genres, setGenres] = useState<Record<number, string>>({})
   const [movies, setMovies] = useState<Movie[]>([])
