@@ -212,6 +212,10 @@
   cursor: pointer;
 }
 
+.genre-button:hover {
+  border-color: var(--accent);
+}
+
 .genre-button.active {
   background: var(--accent);
   color: white;
@@ -310,5 +314,13 @@
 
 .movie-list-item p {
   margin: 4px 0;
+}
+
+.gallery img {
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
