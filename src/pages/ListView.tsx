@@ -28,21 +28,21 @@ function sort_movies(movies: Movie[], sortParam: string, sortOrder: string): Mov
 
 function ListView({ movies } : ListViewItems) {
     const [searchQuery, setSearchQuery] = useState('')
-    const [sortParam, setSortParam] = useState('title')
-    const [sortOrder, setSortOrder] = useState('ascending')
+    const [sortParam, setSortParam] = useState('rating')
+    const [sortOrder, setSortOrder] = useState('descending')
     const searchedMovies = sort_movies(filter_movies(movies, searchQuery), sortParam, sortOrder)
     return (
         <div>
             <div className="list-filters">
-                <input type="text" value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} placeholder='Search for Movies'/>
+                <input value={searchQuery} name="Sort By" type="text" onChange={(event) => setSearchQuery(event.target.value)} placeholder='Search for Movies'/>
                 <div>
-                    <select name="Sort By" onChange={(event) => setSortParam(event.target.value)}>
+                    <select name="Sort By" value={sortParam} onChange={(event) => setSortParam(event.target.value)}>
                         <option value="title">Sort: Title</option>
                         <option value="rating">Sort: Rating</option>
                     </select>
                 </div>
                 <div>
-                    <select name="Sort Order" onChange={(event) => setSortOrder(event.target.value)}>
+                    <select name="Sort Order" value={sortOrder} onChange={(event) => setSortOrder(event.target.value)}>
                         <option value="ascending">Order: Ascending</option>
                         <option value="descending">Order: Descending</option>
                     </select>
